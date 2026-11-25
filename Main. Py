@@ -1,0 +1,19 @@
+from Student.grades import avg, max_grade, min_grade
+from Student.status import check_status
+
+name = input("Enter student name: ")
+
+grades = input("Enter grades separated by space: ")
+grades = list(map(float, grades.split()))
+
+average = avg(grades)
+maximum = max_grade(grades)
+minimum = min_grade(grades)
+
+status = check_status(average)
+
+print("Student:", name)
+print("Avg =", average)
+print("Max =", maximum)
+print("Min =", minimum)
+print("Status =", status)
